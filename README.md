@@ -45,11 +45,8 @@ Hyperparameters used for this model are:
 
 To run, get the URL of the picture, insert it the code and run:
 ```bash
-python infer.py
+python test.py
 ```
-
-| ![Dog](assets/infer1.jpg "Dog Image") | ![Cat](assets/infer0.jpg "Cat Image") |
-| --------------------------------- | ----------------------------------------- |
 
 
 
