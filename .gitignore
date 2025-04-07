@@ -1,0 +1,4 @@
+.vscode
+pet_images/
+*.pth
+*.pt
