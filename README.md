@@ -1,50 +1,60 @@
-# Dog & Cat Classification with PyTorch
+# Pytorch erabiliz, katuen eta txakurren irudiak klasifikatzeko sarea
 
 
-## Introduction 
-
-Personal project to build deep learning model to classification images of Dogs and Cats using PyTorch.
 
 ## Training Set
 
-The data  used for the project was taken from [Kaggle](https://www.kaggle.com/competitions/dogs-vs-cats/data), including labelled images of Dogs and Cats (12500 images each), and unlabelled ones. 
+Entrenatzeko eta balidazioa egiteko datuak [Kaggle](https://www.kaggle.com/datasets/shaunthesheep/microsoft-catsvsdogs-dataset/data)-etik atera dira, entrenatzeko 10000 irudi erabiliko ditugu eta balidatzeko 2500. 
 
-## Depedencies and Installation
+## Zer instalatu behar dugu?
+Python behar dugu, espezifikazio hauekin egin ditut nire saiakerak:
+
 - Enviroments: Python 3.10.6 + CUDA 12.0
 
-- Required library:
-    ```pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+Nire gomendioa da virtual environment edo anaconda erabiltzea python bertsio ezberdinak edo library ezberdinak instalatzeko
+Beste aukera Docker erabiltzea izango litzateke
+
+
+- Required libraries:
+
+    - Pytorch instalatu behar dugu, nire kasuan, nire ordenagailua GPU bat daukat eta bertsio hau instalatu nuen. Pytorch-en webgunean zure bertsioa eta espezifikazioen arabera komando egokia ematen dizute
+    ```
+    pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+    ```
+
+    - Behar ditugun beste liburutegiak instalatu
+    ```
     pip3 install -r requirements.txt
     ```
 
-## Data Preparation
+## Datuak prozesatu
 
-Labelled data was used to train the model, 12500 images for each categories was divided 80% as train data and 20% as test data as shown:
+Esan bezala entrenatzeko 10000 irudi erabiliko ditugu eta balidatzeko 2500.
 
 $\qquad$ data/ <br>
 $\qquad$ $\qquad$ train/ <br>
-$\qquad$ $\qquad$ $\qquad$  | -- cat (10000 images) <br>
-$\qquad$ $\qquad$ $\qquad$  | -- dogs (10000 images) <br>
+$\qquad$ $\qquad$ $\qquad$  | -- gato (10000 irudi) <br>
+$\qquad$ $\qquad$ $\qquad$  | -- perro (10000 irudi) <br>
 $\qquad$ $\qquad$ test/ <br>
-$\qquad$ $\qquad$ $\qquad$  | -- cat (2500 images) <br>
-$\qquad$ $\qquad$ $\qquad$  | -- dogs (2500 images) <br>
+$\qquad$ $\qquad$ $\qquad$  | -- gato (2500 irudi) <br>
+$\qquad$ $\qquad$ $\qquad$  | -- perro (2500 irudi) <br>
 
-## Training
+## Sarea entrenatzeko
 
-To run, use this command
-``` bash
+Entrenamendua egiteko virtual environment-a aktibatu (erabili baduzu) eta hau ejekutatu
+```
 python train.py
 ```
 
-Hyperparameters used for this model are:
+Erabilitako hiperparametroak:
 
 - Epoch = 10
 - Learning rate = 0.001
 
-## Inference
+## Test egiteko
 
-To run, get the URL of the picture, insert it the code and run:
-```bash
+Gure kasuan, irudiak test_imgs direktorian dauzkate
+```
 python test.py
 ```
 
