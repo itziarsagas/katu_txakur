@@ -31,7 +31,7 @@ Beste aukera Docker erabiltzea izango litzateke
 
 Esan bezala entrenatzeko 10000 irudi erabiliko ditugu eta balidatzeko 2500.
 
-$\qquad$ data/ <br>
+$\qquad$ pet_images/ <br>
 $\qquad$ $\qquad$ train/ <br>
 $\qquad$ $\qquad$ $\qquad$  | -- gato (10000 irudi) <br>
 $\qquad$ $\qquad$ $\qquad$  | -- perro (10000 irudi) <br>
